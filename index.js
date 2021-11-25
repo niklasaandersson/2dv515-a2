@@ -37,7 +37,11 @@ app.use((req, res, next) => {
 
 //
 app.get(`/api/${process.env.API_VERSION}/`, (req, res) => {
-  res.status(200).json({data:'Hello World!'})
+  res.status(200).json({ data: 'Hello World from api v1!' })
+})
+
+app.get(`/api/${process.env.API_VERSION}/`, (req, res) => {
+  res.status(200).json({ data: 'Hello World!' })
 })
 
 if (process.env.NODE_ENV === 'production') {
